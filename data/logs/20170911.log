@@ -1,0 +1,258 @@
+2017-09-11 14:23:28 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_60e7194e99e7]]></ToUserName>
+<FromUserName><![CDATA[okBFJ1t2voTHz_7sH-shK3PWVnWc]]></FromUserName>
+<CreateTime>1505111007</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[subscribe]]></Event>
+<EventKey><![CDATA[]]></EventKey>
+</xml>
+
+2017-09-11 14:23:28 params :
+------------
+Array:
+message : Array ;
+module : basic ;
+rule : 23 ;
+priority : 0 ;
+keyword : Array ;
+
+2017-09-11 14:23:28 response :
+------------
+Array:
+FromUserName : gh_60e7194e99e7 ;
+ToUserName : okBFJ1t2voTHz_7sH-shK3PWVnWc ;
+MsgType : text ;
+Content : 感谢您关注珠玉私房烘焙。/呲牙我们秉承着“无添加，健康”的信念，将每一份甜美带给您。 ;
+
+2017-09-11 14:23:39 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_60e7194e99e7]]></ToUserName>
+<FromUserName><![CDATA[okBFJ1t2voTHz_7sH-shK3PWVnWc]]></FromUserName>
+<CreateTime>1505111019</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://zhuyu.baimuv.com/app/index.php?i=34&c=entry&do=member&m=ewei_shop]]></EventKey>
+<MenuId>441526356</MenuId>
+</xml>
+
+2017-09-11 14:23:39 params :
+------------
+Array:
+message : Array ;
+module : basic ;
+rule : 24 ;
+priority : 0 ;
+keyword : Array ;
+
+2017-09-11 14:23:39 response :
+------------
+Array:
+FromUserName : gh_60e7194e99e7 ;
+ToUserName : okBFJ1t2voTHz_7sH-shK3PWVnWc ;
+MsgType : text ;
+Content : 查看订购商品请点击下方立即订购/可爱 ;
+
+2017-09-11 14:24:14 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_60e7194e99e7]]></ToUserName>
+<FromUserName><![CDATA[okBFJ1t2voTHz_7sH-shK3PWVnWc]]></FromUserName>
+<CreateTime>1505111054</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[CLICK]]></Event>
+<EventKey><![CDATA[关于我们]]></EventKey>
+</xml>
+
+2017-09-11 14:24:14 params :
+------------
+Array:
+message : Array ;
+module : basic ;
+rule : 22 ;
+priority : 0 ;
+keyword : Array ;
+
+2017-09-11 14:24:14 response :
+------------
+Array:
+FromUserName : gh_60e7194e99e7 ;
+ToUserName : okBFJ1t2voTHz_7sH-shK3PWVnWc ;
+MsgType : text ;
+Content : 感谢您关注珠玉私房烘焙。/呲牙我们秉承着“无添加，健康”的信念，将每一份甜美带给您。 ;
+
+2017-09-11 14:24:33 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_60e7194e99e7]]></ToUserName>
+<FromUserName><![CDATA[okBFJ1t2voTHz_7sH-shK3PWVnWc]]></FromUserName>
+<CreateTime>1505111073</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://zhuyu.baimuv.com/app/index.php?i=34&c=entry&do=shop&m=ewei_shop&wxref=mp.weixin.qq.com#wechat_redirect]]></EventKey>
+<MenuId>441526356</MenuId>
+</xml>
+
+2017-09-11 14:24:33 params :
+------------
+Array:
+message : Array ;
+module : basic ;
+rule : 24 ;
+priority : 0 ;
+keyword : Array ;
+
+2017-09-11 14:24:33 response :
+------------
+Array:
+FromUserName : gh_60e7194e99e7 ;
+ToUserName : okBFJ1t2voTHz_7sH-shK3PWVnWc ;
+MsgType : text ;
+Content : 查看订购商品请点击下方立即订购/可爱 ;
+
+2017-09-11 14:25:48 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_60e7194e99e7]]></ToUserName>
+<FromUserName><![CDATA[okBFJ1t2voTHz_7sH-shK3PWVnWc]]></FromUserName>
+<CreateTime>1505111148</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://zhuyu.baimuv.com/app/index.php?i=34&c=entry&do=shop&m=ewei_shop&wxref=mp.weixin.qq.com#wechat_redirect]]></EventKey>
+<MenuId>441526356</MenuId>
+</xml>
+
+2017-09-11 14:25:48 params :
+------------
+Array:
+message : Array ;
+module : basic ;
+rule : 24 ;
+priority : 0 ;
+keyword : Array ;
+
+2017-09-11 14:25:48 response :
+------------
+Array:
+FromUserName : gh_60e7194e99e7 ;
+ToUserName : okBFJ1t2voTHz_7sH-shK3PWVnWc ;
+MsgType : text ;
+Content : 查看订购商品请点击下方立即订购/可爱 ;
+
+2017-09-11 14:40:17 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_60e7194e99e7]]></ToUserName>
+<FromUserName><![CDATA[okBFJ1t2voTHz_7sH-shK3PWVnWc]]></FromUserName>
+<CreateTime>1505112017</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://zhuyu.baimuv.com/app/index.php?i=34&c=entry&do=shop&m=ewei_shop&wxref=mp.weixin.qq.com#wechat_redirect]]></EventKey>
+<MenuId>441526356</MenuId>
+</xml>
+
+2017-09-11 14:40:17 params :
+------------
+Array:
+message : Array ;
+module : basic ;
+rule : 24 ;
+priority : 0 ;
+keyword : Array ;
+
+2017-09-11 14:40:17 response :
+------------
+Array:
+FromUserName : gh_60e7194e99e7 ;
+ToUserName : okBFJ1t2voTHz_7sH-shK3PWVnWc ;
+MsgType : text ;
+Content : 查看订购商品请点击下方立即订购/可爱 ;
+
+2017-09-11 14:40:27 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_60e7194e99e7]]></ToUserName>
+<FromUserName><![CDATA[okBFJ1t2voTHz_7sH-shK3PWVnWc]]></FromUserName>
+<CreateTime>1505112027</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://zhuyu.baimuv.com/app/index.php?i=34&c=entry&do=shop&m=ewei_shop&wxref=mp.weixin.qq.com#wechat_redirect]]></EventKey>
+<MenuId>441526356</MenuId>
+</xml>
+
+2017-09-11 14:40:27 params :
+------------
+Array:
+message : Array ;
+module : basic ;
+rule : 24 ;
+priority : 0 ;
+keyword : Array ;
+
+2017-09-11 14:40:27 response :
+------------
+Array:
+FromUserName : gh_60e7194e99e7 ;
+ToUserName : okBFJ1t2voTHz_7sH-shK3PWVnWc ;
+MsgType : text ;
+Content : 查看订购商品请点击下方立即订购/可爱 ;
+
+2017-09-11 14:44:04 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_60e7194e99e7]]></ToUserName>
+<FromUserName><![CDATA[okBFJ1t2voTHz_7sH-shK3PWVnWc]]></FromUserName>
+<CreateTime>1505112244</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://zhuyu.baimuv.com/app/index.php?i=34&c=entry&do=shop&m=ewei_shop&wxref=mp.weixin.qq.com#wechat_redirect]]></EventKey>
+<MenuId>441526356</MenuId>
+</xml>
+
+2017-09-11 14:44:04 params :
+------------
+Array:
+message : Array ;
+module : basic ;
+rule : 24 ;
+priority : 0 ;
+keyword : Array ;
+
+2017-09-11 14:44:04 response :
+------------
+Array:
+FromUserName : gh_60e7194e99e7 ;
+ToUserName : okBFJ1t2voTHz_7sH-shK3PWVnWc ;
+MsgType : text ;
+Content : 查看订购商品请点击下方立即订购/可爱 ;
+
+2017-09-11 14:58:06 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_60e7194e99e7]]></ToUserName>
+<FromUserName><![CDATA[okBFJ1kUhhOC0bH5I-tkbO1nJuFA]]></FromUserName>
+<CreateTime>1505113086</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[subscribe]]></Event>
+<EventKey><![CDATA[]]></EventKey>
+</xml>
+
+2017-09-11 14:58:06 params :
+------------
+Array:
+message : Array ;
+module : basic ;
+rule : 23 ;
+priority : 0 ;
+keyword : Array ;
+
+2017-09-11 14:58:06 response :
+------------
+Array:
+FromUserName : gh_60e7194e99e7 ;
+ToUserName : okBFJ1kUhhOC0bH5I-tkbO1nJuFA ;
+MsgType : text ;
+Content : 感谢您关注珠玉私房烘焙。/呲牙我们秉承着“无添加，健康”的信念，将每一份甜美带给您。 ;
+

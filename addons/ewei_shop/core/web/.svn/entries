@@ -1,0 +1,49 @@
+10
+
+dir
+1349
+svn://127.0.0.1/zhuyu/addons/ewei_shop/core/web
+svn://127.0.0.1/zhuyu
+
+
+
+2017-07-28T10:42:36.771408Z
+1331
+gao
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+bacaa17a-0532-4b9a-bd0a-ca3ae5dcc7d4
+
+plugins
+dir
+
+finance
+dir
+
+member
+dir
+
+shop
+dir
+
+statistics
+dir
+
+sysset
+dir
+
+order
+dir
+

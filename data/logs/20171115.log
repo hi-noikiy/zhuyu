@@ -1,0 +1,28 @@
+2017-11-15 12:43:16 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_60e7194e99e7]]></ToUserName>
+<FromUserName><![CDATA[okBFJ1vW0P8GF_ltZ7Oc7WvRG6LY]]></FromUserName>
+<CreateTime>1510720996</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[subscribe]]></Event>
+<EventKey><![CDATA[]]></EventKey>
+</xml>
+
+2017-11-15 12:43:17 params :
+------------
+Array:
+message : Array ;
+module : basic ;
+rule : 23 ;
+priority : 0 ;
+keyword : Array ;
+
+2017-11-15 12:43:17 response :
+------------
+Array:
+FromUserName : gh_60e7194e99e7 ;
+ToUserName : okBFJ1vW0P8GF_ltZ7Oc7WvRG6LY ;
+MsgType : text ;
+Content : 感谢您关注珠玉私房烘焙。/呲牙我们秉承着“无添加，健康”的信念，将每一份甜美带给您。 ;
+

@@ -1,0 +1,151 @@
+10
+
+dir
+1349
+svn://127.0.0.1/zhuyu/web/resource/components/tinymce/plugins
+svn://127.0.0.1/zhuyu
+
+
+
+2017-07-03T13:27:26.887445Z
+2
+gao
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+bacaa17a-0532-4b9a-bd0a-ca3ae5dcc7d4
+
+media
+dir
+
+pagebreak
+dir
+
+insertdatetime
+dir
+
+image
+dir
+
+importcss
+dir
+
+textcolor
+dir
+
+noneditable
+dir
+
+autolink
+dir
+
+example_dependency
+dir
+
+autoresize
+dir
+
+example
+dir
+
+save
+dir
+
+lists
+dir
+
+emoticons
+dir
+
+visualblocks
+dir
+
+tabfocus
+dir
+
+advlist
+dir
+
+hr
+dir
+
+anchor
+dir
+
+layer
+dir
+
+preview
+dir
+
+directionality
+dir
+
+wordcount
+dir
+
+visualchars
+dir
+
+legacyoutput
+dir
+
+table
+dir
+
+autosave
+dir
+
+print
+dir
+
+link
+dir
+
+multiimage
+dir
+
+nonbreaking
+dir
+
+fullpage
+dir
+
+searchreplace
+dir
+
+fullscreen
+dir
+
+spellchecker
+dir
+
+contextmenu
+dir
+
+code
+dir
+
+charmap
+dir
+
+template
+dir
+
+paste
+dir
+
+bbcode
+dir
+

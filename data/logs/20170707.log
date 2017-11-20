@@ -1,0 +1,29 @@
+2017-07-07 10:26:48 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_60e7194e99e7]]></ToUserName>
+<FromUserName><![CDATA[okBFJ1nfxedF3W8xSCZKhNP1AcBM]]></FromUserName>
+<CreateTime>1499394407</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[商城]]></Content>
+<MsgId>6439849942311294336</MsgId>
+</xml>
+
+2017-07-07 10:26:48 params :
+------------
+Array:
+message : Array ;
+module : cover ;
+rule : 12 ;
+priority : 0 ;
+keyword : Array ;
+
+2017-07-07 10:26:48 response :
+------------
+Array:
+FromUserName : gh_60e7194e99e7 ;
+ToUserName : okBFJ1nfxedF3W8xSCZKhNP1AcBM ;
+MsgType : news ;
+ArticleCount : 1 ;
+Articles : Array ;
+

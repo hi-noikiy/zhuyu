@@ -1,0 +1,15 @@
+2017-07-19 10:08:32 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[toUser]]></ToUserName><FromUserName><![CDATA[fromUser]]></FromUserName><CreateTime>1500430109</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA[测试内容]]></Content><MsgId>1234567890123456</MsgId></xml>
+
+2017-07-19 10:08:32 params :
+------------
+Array:
+rule : -2 ;
+module :  ;
+message : Array ;
+
+2017-07-19 10:08:32 response :
+------------
+

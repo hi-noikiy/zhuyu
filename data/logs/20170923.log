@@ -1,0 +1,259 @@
+2017-09-23 13:04:28 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_60e7194e99e7]]></ToUserName>
+<FromUserName><![CDATA[okBFJ1hmCHBp_PzyzW3PSPvfHpFU]]></FromUserName>
+<CreateTime>1506143068</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[subscribe]]></Event>
+<EventKey><![CDATA[]]></EventKey>
+</xml>
+
+2017-09-23 13:04:28 params :
+------------
+Array:
+message : Array ;
+module : basic ;
+rule : 23 ;
+priority : 0 ;
+keyword : Array ;
+
+2017-09-23 13:04:28 response :
+------------
+Array:
+FromUserName : gh_60e7194e99e7 ;
+ToUserName : okBFJ1hmCHBp_PzyzW3PSPvfHpFU ;
+MsgType : text ;
+Content : 感谢您关注珠玉私房烘焙。/呲牙我们秉承着“无添加，健康”的信念，将每一份甜美带给您。 ;
+
+2017-09-23 13:04:33 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_60e7194e99e7]]></ToUserName>
+<FromUserName><![CDATA[okBFJ1hmCHBp_PzyzW3PSPvfHpFU]]></FromUserName>
+<CreateTime>1506143073</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[CLICK]]></Event>
+<EventKey><![CDATA[关于我们]]></EventKey>
+</xml>
+
+2017-09-23 13:04:33 params :
+------------
+Array:
+message : Array ;
+module : basic ;
+rule : 22 ;
+priority : 0 ;
+keyword : Array ;
+
+2017-09-23 13:04:33 response :
+------------
+Array:
+FromUserName : gh_60e7194e99e7 ;
+ToUserName : okBFJ1hmCHBp_PzyzW3PSPvfHpFU ;
+MsgType : text ;
+Content : 感谢您关注珠玉私房烘焙。/呲牙我们秉承着“无添加，健康”的信念，将每一份甜美带给您。 ;
+
+2017-09-23 13:04:36 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_60e7194e99e7]]></ToUserName>
+<FromUserName><![CDATA[okBFJ1hmCHBp_PzyzW3PSPvfHpFU]]></FromUserName>
+<CreateTime>1506143076</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://zhuyu.baimuv.com/app/index.php?i=34&c=entry&do=shop&m=ewei_shop&wxref=mp.weixin.qq.com#wechat_redirect]]></EventKey>
+<MenuId>441526356</MenuId>
+</xml>
+
+2017-09-23 13:04:36 params :
+------------
+Array:
+message : Array ;
+module : basic ;
+rule : 24 ;
+priority : 0 ;
+keyword : Array ;
+
+2017-09-23 13:04:36 response :
+------------
+Array:
+FromUserName : gh_60e7194e99e7 ;
+ToUserName : okBFJ1hmCHBp_PzyzW3PSPvfHpFU ;
+MsgType : text ;
+Content : 查看订购商品请点击下方立即订购/可爱 ;
+
+2017-09-23 13:47:16 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_60e7194e99e7]]></ToUserName>
+<FromUserName><![CDATA[okBFJ1hmCHBp_PzyzW3PSPvfHpFU]]></FromUserName>
+<CreateTime>1506145636</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://zhuyu.baimuv.com/app/index.php?i=34&c=entry&do=shop&m=ewei_shop&wxref=mp.weixin.qq.com#wechat_redirect]]></EventKey>
+<MenuId>441526356</MenuId>
+</xml>
+
+2017-09-23 13:47:16 params :
+------------
+Array:
+message : Array ;
+module : basic ;
+rule : 24 ;
+priority : 0 ;
+keyword : Array ;
+
+2017-09-23 13:47:16 response :
+------------
+Array:
+FromUserName : gh_60e7194e99e7 ;
+ToUserName : okBFJ1hmCHBp_PzyzW3PSPvfHpFU ;
+MsgType : text ;
+Content : 查看订购商品请点击下方立即订购/可爱 ;
+
+2017-09-23 13:49:45 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_60e7194e99e7]]></ToUserName>
+<FromUserName><![CDATA[okBFJ1hmCHBp_PzyzW3PSPvfHpFU]]></FromUserName>
+<CreateTime>1506145785</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://zhuyu.baimuv.com/app/index.php?i=34&c=entry&do=shop&m=ewei_shop&wxref=mp.weixin.qq.com#wechat_redirect]]></EventKey>
+<MenuId>441526356</MenuId>
+</xml>
+
+2017-09-23 13:49:45 params :
+------------
+Array:
+message : Array ;
+module : basic ;
+rule : 24 ;
+priority : 0 ;
+keyword : Array ;
+
+2017-09-23 13:49:45 response :
+------------
+Array:
+FromUserName : gh_60e7194e99e7 ;
+ToUserName : okBFJ1hmCHBp_PzyzW3PSPvfHpFU ;
+MsgType : text ;
+Content : 查看订购商品请点击下方立即订购/可爱 ;
+
+2017-09-23 13:50:54 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_60e7194e99e7]]></ToUserName>
+<FromUserName><![CDATA[okBFJ1hmCHBp_PzyzW3PSPvfHpFU]]></FromUserName>
+<CreateTime>1506145853</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://zhuyu.baimuv.com/app/index.php?i=34&c=entry&do=member&m=ewei_shop]]></EventKey>
+<MenuId>441526356</MenuId>
+</xml>
+
+2017-09-23 13:50:54 params :
+------------
+Array:
+message : Array ;
+module : basic ;
+rule : 24 ;
+priority : 0 ;
+keyword : Array ;
+
+2017-09-23 13:50:54 response :
+------------
+Array:
+FromUserName : gh_60e7194e99e7 ;
+ToUserName : okBFJ1hmCHBp_PzyzW3PSPvfHpFU ;
+MsgType : text ;
+Content : 查看订购商品请点击下方立即订购/可爱 ;
+
+2017-09-23 13:51:11 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_60e7194e99e7]]></ToUserName>
+<FromUserName><![CDATA[okBFJ1hmCHBp_PzyzW3PSPvfHpFU]]></FromUserName>
+<CreateTime>1506145870</CreateTime>
+<MsgType><![CDATA[image]]></MsgType>
+<PicUrl><![CDATA[http://mmbiz.qpic.cn/mmbiz_jpg/HGlibc3xQY0Eom8JPTQDNfGGrRWIKepmcmKTjo56W1RWR99UPFOccZRQRKrycmXBwJWFLFhFBUXWJgkiauKfcmvQ/0]]></PicUrl>
+<MsgId>6468847255098809490</MsgId>
+<MediaId><![CDATA[3nqS1KFEMtgCOHmNGsxYquNatrOa0BSsIfO1cxURBllwOJseFEvEyo5Sb62VAq-f]]></MediaId>
+</xml>
+
+2017-09-23 13:51:11 params :
+------------
+Array:
+message : Array ;
+module : basic ;
+rule : 24 ;
+priority : 0 ;
+keyword : Array ;
+
+2017-09-23 13:51:11 response :
+------------
+Array:
+FromUserName : gh_60e7194e99e7 ;
+ToUserName : okBFJ1hmCHBp_PzyzW3PSPvfHpFU ;
+MsgType : text ;
+Content : 查看订购商品请点击下方立即订购/可爱 ;
+
+2017-09-23 13:51:12 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_60e7194e99e7]]></ToUserName>
+<FromUserName><![CDATA[okBFJ1hmCHBp_PzyzW3PSPvfHpFU]]></FromUserName>
+<CreateTime>1506145871</CreateTime>
+<MsgType><![CDATA[image]]></MsgType>
+<PicUrl><![CDATA[http://mmbiz.qpic.cn/mmbiz_jpg/HGlibc3xQY0Eom8JPTQDNfGGrRWIKepmcXOibic0ia3h1rt4A2OkufL7ictzVjhULSK5XpjdYvNHPcNED9RTsKFWYmg/0]]></PicUrl>
+<MsgId>6468847259393776787</MsgId>
+<MediaId><![CDATA[CUHERQK0xdIx7x8EnTMduU47OapXtkj5BmpcK5z5m6YjePafIOvPaWzEl-ipSwhv]]></MediaId>
+</xml>
+
+2017-09-23 13:51:12 params :
+------------
+Array:
+message : Array ;
+module : basic ;
+rule : 24 ;
+priority : 0 ;
+keyword : Array ;
+
+2017-09-23 13:51:12 response :
+------------
+Array:
+FromUserName : gh_60e7194e99e7 ;
+ToUserName : okBFJ1hmCHBp_PzyzW3PSPvfHpFU ;
+MsgType : text ;
+Content : 查看订购商品请点击下方立即订购/可爱 ;
+
+2017-09-23 19:11:13 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_60e7194e99e7]]></ToUserName>
+<FromUserName><![CDATA[okBFJ1nfxedF3W8xSCZKhNP1AcBM]]></FromUserName>
+<CreateTime>1506165073</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://zhuyu.baimuv.com/app/index.php?i=34&c=entry&do=shop&m=ewei_shop&wxref=mp.weixin.qq.com#wechat_redirect]]></EventKey>
+<MenuId>441526356</MenuId>
+</xml>
+
+2017-09-23 19:11:13 params :
+------------
+Array:
+message : Array ;
+module : basic ;
+rule : 24 ;
+priority : 0 ;
+keyword : Array ;
+
+2017-09-23 19:11:13 response :
+------------
+Array:
+FromUserName : gh_60e7194e99e7 ;
+ToUserName : okBFJ1nfxedF3W8xSCZKhNP1AcBM ;
+MsgType : text ;
+Content : 查看订购商品请点击下方立即订购/可爱 ;
+

@@ -1,0 +1,284 @@
+2017-07-26 14:56:53 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_60e7194e99e7]]></ToUserName>
+<FromUserName><![CDATA[okBFJ1jVugn-vANTttXnRIGKuBww]]></FromUserName>
+<CreateTime>1501052212</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://zhuyu.baimuv.com/app/index.php?i=34&c=entry&do=shop&m=ewei_shop&wxref=mp.weixin.qq.com#wechat_redirect]]></EventKey>
+<MenuId>441526356</MenuId>
+</xml>
+
+2017-07-26 14:56:53 params :
+------------
+Array:
+rule : -2 ;
+module :  ;
+message : Array ;
+
+2017-07-26 14:56:53 response :
+------------
+
+2017-07-26 14:56:55 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_60e7194e99e7]]></ToUserName>
+<FromUserName><![CDATA[okBFJ1jVugn-vANTttXnRIGKuBww]]></FromUserName>
+<CreateTime>1501052215</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://zhuyu.baimuv.com/app/index.php?i=34&c=entry&do=shop&m=ewei_shop&wxref=mp.weixin.qq.com#wechat_redirect]]></EventKey>
+<MenuId>441526356</MenuId>
+</xml>
+
+2017-07-26 14:56:55 params :
+------------
+Array:
+rule : -2 ;
+module :  ;
+message : Array ;
+
+2017-07-26 14:56:55 response :
+------------
+
+2017-07-26 17:18:49 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_60e7194e99e7]]></ToUserName>
+<FromUserName><![CDATA[okBFJ1jVugn-vANTttXnRIGKuBww]]></FromUserName>
+<CreateTime>1501060729</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://zhuyu.baimuv.com/app/index.php?i=34&c=entry&do=shop&m=ewei_shop&wxref=mp.weixin.qq.com#wechat_redirect]]></EventKey>
+<MenuId>441526356</MenuId>
+</xml>
+
+2017-07-26 17:18:49 params :
+------------
+Array:
+rule : -2 ;
+module :  ;
+message : Array ;
+
+2017-07-26 17:18:49 response :
+------------
+
+2017-07-26 22:10:49 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_60e7194e99e7]]></ToUserName>
+<FromUserName><![CDATA[okBFJ1jVugn-vANTttXnRIGKuBww]]></FromUserName>
+<CreateTime>1501078249</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://zhuyu.baimuv.com/app/index.php?i=34&c=entry&do=shop&m=ewei_shop&wxref=mp.weixin.qq.com#wechat_redirect]]></EventKey>
+<MenuId>441526356</MenuId>
+</xml>
+
+2017-07-26 22:10:49 params :
+------------
+Array:
+rule : -2 ;
+module :  ;
+message : Array ;
+
+2017-07-26 22:10:49 response :
+------------
+
+2017-07-26 22:10:53 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_60e7194e99e7]]></ToUserName>
+<FromUserName><![CDATA[okBFJ1jVugn-vANTttXnRIGKuBww]]></FromUserName>
+<CreateTime>1501078253</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://zhuyu.baimuv.com/app/index.php?i=34&c=entry&do=shop&m=ewei_shop&wxref=mp.weixin.qq.com#wechat_redirect]]></EventKey>
+<MenuId>441526356</MenuId>
+</xml>
+
+2017-07-26 22:10:53 params :
+------------
+Array:
+rule : -2 ;
+module :  ;
+message : Array ;
+
+2017-07-26 22:10:53 response :
+------------
+
+2017-07-26 22:11:56 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_60e7194e99e7]]></ToUserName>
+<FromUserName><![CDATA[okBFJ1jVugn-vANTttXnRIGKuBww]]></FromUserName>
+<CreateTime>1501078316</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[q]]></Content>
+<MsgId>6447082276396323970</MsgId>
+</xml>
+
+2017-07-26 22:11:56 params :
+------------
+Array:
+message : Array ;
+module : default ;
+rule : -1 ;
+
+2017-07-26 22:11:56 response :
+------------
+Array:
+params : Array ;
+
+2017-07-26 22:12:17 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_60e7194e99e7]]></ToUserName>
+<FromUserName><![CDATA[okBFJ1jVugn-vANTttXnRIGKuBww]]></FromUserName>
+<CreateTime>1501078337</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[蛋糕]]></Content>
+<MsgId>6447082366590637195</MsgId>
+</xml>
+
+2017-07-26 22:12:17 params :
+------------
+Array:
+message : Array ;
+module : default ;
+rule : -1 ;
+
+2017-07-26 22:12:17 response :
+------------
+Array:
+params : Array ;
+
+2017-07-26 22:12:55 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_60e7194e99e7]]></ToUserName>
+<FromUserName><![CDATA[okBFJ1jVugn-vANTttXnRIGKuBww]]></FromUserName>
+<CreateTime>1501078375</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[unsubscribe]]></Event>
+<EventKey><![CDATA[]]></EventKey>
+</xml>
+
+2017-07-26 22:13:36 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_60e7194e99e7]]></ToUserName>
+<FromUserName><![CDATA[okBFJ1jVugn-vANTttXnRIGKuBww]]></FromUserName>
+<CreateTime>1501078416</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[subscribe]]></Event>
+<EventKey><![CDATA[]]></EventKey>
+</xml>
+
+2017-07-26 22:13:36 params :
+------------
+Array:
+message : Array ;
+module : default ;
+rule : -1 ;
+
+2017-07-26 22:13:36 response :
+------------
+Array:
+params : Array ;
+
+2017-07-26 22:13:47 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_60e7194e99e7]]></ToUserName>
+<FromUserName><![CDATA[okBFJ1jVugn-vANTttXnRIGKuBww]]></FromUserName>
+<CreateTime>1501078427</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[？]]></Content>
+<MsgId>6447082753137693865</MsgId>
+</xml>
+
+2017-07-26 22:13:47 params :
+------------
+Array:
+message : Array ;
+module : default ;
+rule : -1 ;
+
+2017-07-26 22:13:47 response :
+------------
+Array:
+params : Array ;
+
+2017-07-26 22:14:57 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_60e7194e99e7]]></ToUserName>
+<FromUserName><![CDATA[okBFJ1jVugn-vANTttXnRIGKuBww]]></FromUserName>
+<CreateTime>1501078497</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[1]]></Content>
+<MsgId>6447083053785404613</MsgId>
+</xml>
+
+2017-07-26 22:14:57 params :
+------------
+Array:
+message : Array ;
+module : default ;
+rule : -1 ;
+
+2017-07-26 22:14:57 response :
+------------
+Array:
+params : Array ;
+
+2017-07-26 22:16:39 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_60e7194e99e7]]></ToUserName>
+<FromUserName><![CDATA[okBFJ1jVugn-vANTttXnRIGKuBww]]></FromUserName>
+<CreateTime>1501078599</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://zhuyu.baimuv.com/app/index.php?i=34&c=entry&do=shop&m=ewei_shop&wxref=mp.weixin.qq.com#wechat_redirect]]></EventKey>
+<MenuId>441526356</MenuId>
+</xml>
+
+2017-07-26 22:16:39 params :
+------------
+Array:
+message : Array ;
+module : default ;
+rule : -1 ;
+
+2017-07-26 22:16:39 response :
+------------
+Array:
+params : Array ;
+
+2017-07-26 23:04:31 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_60e7194e99e7]]></ToUserName>
+<FromUserName><![CDATA[okBFJ1jVugn-vANTttXnRIGKuBww]]></FromUserName>
+<CreateTime>1501081471</CreateTime>
+<MsgType><![CDATA[event]]></MsgType>
+<Event><![CDATA[VIEW]]></Event>
+<EventKey><![CDATA[http://zhuyu.baimuv.com/app/index.php?i=34&c=entry&do=shop&m=ewei_shop&wxref=mp.weixin.qq.com#wechat_redirect]]></EventKey>
+<MenuId>441526356</MenuId>
+</xml>
+
+2017-07-26 23:04:31 params :
+------------
+Array:
+message : Array ;
+module : default ;
+rule : -1 ;
+
+2017-07-26 23:04:31 response :
+------------
+Array:
+params : Array ;
+

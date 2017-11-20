@@ -1,0 +1,139 @@
+<?php defined('IN_IA') or exit('Access Denied');?><?php (!empty($this) && $this instanceof WeModuleSite) ? (include $this->template('common/header2', TEMPLATE_INCLUDEPATH)) : (include template('common/header2', TEMPLATE_INCLUDEPATH));?>
+		<link rel="stylesheet" type="text/css" href="../addons/ewei_shop/static/cate/css/mui.picker.min.css"/>
+		<style type="text/css">
+			.detail-footer {
+				line-height: 0.98rem;
+			}
+			.detail-footer >span {color: #a61a59}
+			.order-sel .right input {width: 100%;}
+		</style>
+		<div class="page">
+			<div class="order-head">
+				<a class="back" onclick="window.history.back();"  href="javascript:;"><img src="../addons/ewei_shop/static/cate/img/order_back.png" /></a>
+				订单详情
+			</div>
+			<div class="content">
+				<div class="order-items">
+					<!-- 已下单 -->
+					<script id='orderinfo' type='text/html'>
+					<div class="order-sel sel-title"><span class="fl left"><%order.createtime%>下单</span><span class="fr price">
+	        <%if order.status==0 && order.paytype!=3%>待付款<%/if%>
+	        <%if order.status==1%>
+	        	<%if order.allstate==0%>
+	        	待制作
+	        	<%/if%>
+	        	<%if order.allstate==1%>
+	        	制作中
+	        	<%/if%>
+	        <%/if%>
+	        <%if order.status==2 %>运输中<%/if%>
+	        <%if order.status==3%>已完成<%/if%>
+	        <%if order.status==-1%>已关闭<%/if%>					
+					
+					</span></div>
+					<!-- 这里开始遍历 S-->
+					
+					<%each goods as g%>
+					<div class="order-item" onclick="window.location.href='<?php  echo $this->createMobileUrl('shop/detail')?>&id=<%g.goodsid%>'">
+						<div class="item">
+							<img class="fl" src="<%g.thumb%>" />
+							<div class="text">
+								<div class="title"><%g.title%></div>
+								<%if g.optionid!='0'%><div class="sub-title">规格：<%g.optiontitle%></div><%/if%>
+								<div class="price">￥<%g.price%></div>
+							</div>
+							<div class="number">x<%g.total%></div>
+						</div>
+						<!-- 选择了参数 -->
+						<div class="sel-style">已选择：</div>
+					</div>
+					<%/each%>
+					<!-- 这里开始遍历 E-->
+
+					<!-- 已下单未支付 S-->
+					 <%if order.status==0 && order.paytype!=3%>
+					<div class="total c-6">未支付：<span>￥<%order.oldprice%></span></div>
+					<%else%>
+					<div class="total">共<%goodnum%>件商品&nbsp;&nbsp;&nbsp;小计：<span>￥<%order.oldprice%></span></div>					
+					<%/if%>
+					
+					 <%if order.status==0 && order.paytype!=3%>
+					<div class="total-btns fv">
+						<a id="cancel-order" class="btn f-b" href="javascript:;">取消订单</a>
+						<a class="btn f-b" onclick="location.href ='<?php  echo $this->createMobileUrl('order/pay')?>&orderid=<%order.id%>&openid=<?php  echo $openid;?>'" href="javascript:;">立即支付</a>
+					</div>
+					<%/if%>
+					<div class="order-no-pay">
+						<div class="order-sel-mar">
+							<div class="order-sel"><span class="fl left c-6">订单号：</span><span class="fl"><%order.ordersn%></span></div>
+							<div class="order-sel"><span class="fl left c-6">收货人：</span><span class="fl"><%address.realname%></span></div>
+							<div class="order-sel"><span class="fl left c-6">联系电话：</span><span class="fl"><%address.mobile%></span></div>
+							<div class="order-sel"><span class="fl left c-6">收货地址：</span><span class="fl"><%address.address%></span></div>
+							<div class="order-sel"><span class="fl left c-6">配送时间：</span><span class="fl"><%order.seltime%></span></div>
+						</div>
+						<div class="order-sel-mar">
+							<div class="order-sel"><span class="fl left c-6">支付方式：</span><div class="w80 fl"><span class="fl">微信</span> <%if order.status==0 && order.paytype!=3%><span class="fr">支付状态：<span class="price">未支付</span></span><%/if%></div></div>
+							<div class="order-sel"><span class="fl left c-6">商品总额</span><span class="fr price">￥<%order.oldprice%></span></div>
+							<div class="order-sel"><span class="fl left c-6">配送费用</span><span class="fr">￥<%order.dispatchprice%></span></div>
+							<div class="order-sel"><span class="fl left c-6">优惠券：</span><span class="fr">-￥<%order.couponprice%></span></div>
+						</div>
+					</div>
+					<!-- 已下单未支付 E-->
+					</script>
+				</div>
+
+			</div>
+
+		</div>
+		
+		<script src="../addons/ewei_shop/static/cate/js/jquery-1.12.4.min.js"></script>
+		<script src="../addons/ewei_shop/static/cate/js/tools.js"></script>
+		<script type="text/javascript">
+			
+			require(['core', 'tpl','../addons/ewei_shop/static/cate/js/swiper-3.4.2.min.js'], function (core, tpl,swipe) {
+			
+				core.json('order/detail',{id:'<?php  echo $_GPC['id'];?>'},function(json){
+				
+	                 if(json.status==0){
+	                     core.message('订单已取消或不存在，无法查看!',"<?php  echo $this->createMobileUrl('order')?>" ,'error');
+	                     return;
+	                 }
+	                 json.result.goodnum=json.result.goods.length;
+	                 console.log(json.result);
+	                 $('.order-items').html(  tpl('orderinfo',json.result) );
+	                 
+	                 
+					//订单取消
+					$('#cancel-order').click(function () {
+						Tools.alert('亲，确定要取消该订单吗？', function () {
+                        var reason = '其他原因';
+                        if(reason!=''){
+                             core.json('order/op',{'op':'cancel', orderid:'<?php  echo $_GPC['id'];?>',reason:reason},function(json){
+
+                                 if(json.status==1){
+                                      location.href = core.getUrl('order');
+                                      return;
+                                 }
+                                 else{
+                                      core.tip.show(json.result);
+                                 }
+                             },true,true);
+                        }							
+
+						}, true);
+					});
+	                 
+				
+				});
+
+
+				
+				
+				
+
+
+			});
+
+		</script>
+	</body>
+</html>

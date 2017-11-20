@@ -1,0 +1,902 @@
+{template 'common/header2'}
+		<style type="text/css">
+			.content {bottom: 0.98rem;}
+			.cate-list {background-color: #fff;margin-bottom: 0.3rem;}
+			.page {
+				transition: transform .3s ease-out;
+				z-index: 3;
+			}
+			#bir-candle {transform: translateX(100%);}
+			#bir-text {transform: translateX(100%);}
+		</style>
+		<div class="page">
+			<header id="header" class="i-header fv">
+				<a href="javascript:;" id="show-list" class="icon fl"><img src="../addons/ewei_shop/static/cate/img/i_list_icon.png" /></a>
+				<div class="m" onclick="window.location.href='{php echo $this->createMobileUrl('shop')}'"><img src="../addons/ewei_shop/static/cate/img/i_head_icon.png" /></div>
+				<a href="{php echo $this->createMobileUrl('shop/cart')}" class="icon fr"><img src="../addons/ewei_shop/static/cate/img/i_shop_icon.png" />
+				<p id="cardnum" {if $cartnum==0}style="display:none;"{/if}>{$cartnum}</p>			
+				</a>
+				<div class="top-header-menu" style="display: none;">
+					<a href="{php echo $this->createMobileUrl('shop')}" class="menu-home"><img src="../addons/ewei_shop/static/cate/img/header_list_icon1.png" alt="" /><span>首页</span></a>
+					<a href="{php echo $this->createMobileUrl('shop/category')}" title="" class="menu-class"><img src="../addons/ewei_shop/static/cate/img/header_list_icon2.png" /><span>分类</span></a>
+					<a href="{php echo $this->createMobileUrl('member')}" title="" class="menu-per"><img src="../addons/ewei_shop/static/cate/img/header_list_icon3.png" /><span>个人</span></a>
+				</div>
+			</header>
+			<div class="content">
+				<ul id="car-list" class="car-list">
+					
+					<script id='cartlist' type='text/html'>
+					<!-- 后台需要传递一个id  命名规则：item_1, item_2... 不能重复, 用于删除元素、数据传递 -->
+					<%each list as value index%>
+					<li id="item_<% index+1 %>" data-id="item_<% index+1 %>" 
+					data-cartid="<%value.id%>" 
+                    data-marketprice="<%value.marketprice%>" 
+                    data-goodsid="<%value.goodsid%>" 
+                    sel='1' 
+                    data-maxbuy='<%value.maxbuy%>' 
+                    data-stock='<%value.stock%>'
+					>
+						<div class="content-pad">
+							<div class="item clearfix">
+								<img class="fl lazyload" data-original="<%value.thumb%>" src="<%value.thumb%>" />
+								<div class="text fl">
+									<div class="title"><%value.title%></div>
+									<div class="sub-title"><%if value.optionid!='0'%>规格：<%if optiontitle!=''%><%value.optiontitle%><%else%>未选规格<%/if%>    <%/if%></div>
+									<div class="bottom clearfix">
+										<span class="fl" >￥<span id="price<%value.id%>"><%value.marketprice%>x<%value.total%></span></span>
+										<div class="btns fr">
+											<!-- 如果是一件商品显示删除图标，否则就是 - 号 -->
+											<span style="font-size: 0.4rem" cartid="<%value.id%>"  data-goodsid="<%value.goodsid%>"    class="minus"> <%if value.total==1 %> <img src="../addons/ewei_shop/static/cate/img/delete_icon.png"/> <%else%>-<%/if%></span><!--图 27px --><input type="number" class="input" value="<%value.total%>" /><span cartid="<%value.id%>"  data-goodsid="<%value.goodsid%>"     data-stock='<%value.stock%>'  class="add">+</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="links">
+								<%if value.optionid!='0' &&  value.tableware!='' %><a href="javascript:;" class="link c bg1">每份含免费餐具<%value.tableware%>套</a><%/if%>
+								<!--商品没有开启赠送不显示-->
+								<%if value.isgift==1 %>
+								<a href="javascript:;" class="link bg2 sel" data-id="bir-text"><span class="bir-text">+ <%if value.birthdaycard !=null %><%value.birthdaycard%> <%else%>添加生日牌<%/if%></span><img id="birthdaycardimg" src="../addons/ewei_shop/static/cate/img/car_right_arrow.png" alt="" /></a>
+								<a href="javascript:;" <%if value.cakehatimg!=null%> style="background-image:url(<%value.cakehatimg%>);"<%/if%>  class="link bg3 sel" data-id="bir-hat"><span class="bir-hat">+ <%if value.cakehattitle !=null %><%value.cakehattitle%> <%else%>添加生日帽<%/if%></span><img id="cakehatimg" src="../addons/ewei_shop/static/cate/img/car_right_arrow.png" alt="" /></a>
+								<a href="javascript:;" <%if value.birthdaycandleimg!=null%>style="background-image:url(<%value.birthdaycandleimg%>);"<%/if%>  class="link c bg4 sel" data-id="bir-candle"><span  style="color:#999999" class="bir-candle" >+ <%if value.birthdaycandletitle !=null %><%value.birthdaycandletitle%> <%else%>添加生日蜡烛<%/if%></span><img id="birthdaycandleimg" src="../addons/ewei_shop/static/cate/img/car_right_arrow.png" alt="" /></a>
+								
+								<a href="javascript:;" <%if value.fruitimg!=null%>style="background-image:url(<%value.fruitimg%>);"<%/if%>  class="link c bg4 sel" data-id="bir-fruit"><span  style="color:#999999" class="bir-fruit" >+ <%if value.fruittitle !=null %><%value.fruittitle%> <%else%>添加水果夹心<%/if%></span><img id="fruitimg" src="../addons/ewei_shop/static/cate/img/car_right_arrow.png" alt="" /></a>
+								<%/if%>
+							</div>
+						</div>
+					</li>
+        			<%/each%>
+					</script>
+				</ul>
+				<div id="empty" class="hide" >
+					<div class="empty-wrap">
+						<img src="../addons/ewei_shop/static/cate/img/empty.png">
+						<p>您的购物车里还没有商品</p>
+						<a href="{php echo $this->createMobileUrl('shop')}">去购物>></a>
+					</div>
+				</div>
+				<div class="list-title fhv"><img src="../addons/ewei_shop/static/cate/img/list_title_left.png"/>推荐商品<img src="../addons/ewei_shop/static/cate/img/list_title_right.png"/></div>
+				<ul class="cate-list" id="allshop">
+					
+					<script id='shoplist' type='text/html'>
+					<%each goods as good %>
+						<li>
+							<a href="#">
+								<div class="sq-img"><img class="lazyload" onclick="window.location.href='{php echo $this->createMobileUrl('shop/detail')}&id=<%good.id%>'" src="../addons/ewei_shop/static/cate/img/placeholder_img.png" data-original="<%good.thumb%>"></div>
+								<div class="text">
+									<div class="title over_2"><%good.title%></div>
+									<div class="wrap">
+										<div class="price fl">￥<%good.marketprice%>/6寸</div>
+										<img class="add_cart fr" goodid="<%good.id %>"  price="<%good.marketprice%>" src="../addons/ewei_shop/static/cate/img/add_cart.png">
+									</div>
+								</div>
+							</a>
+						</li>
+					<%/each%>
+					</script>
+					
+					
+				</ul>
+			</div>
+			<!-- 商品选择规格参数  S-->
+			<div id="show-sel" class="sel-bottom-wrap content-pad hide">
+				<div class="top clearfix">
+					<span class="fl">￥<span class="price"></span></span><a href="javascript:;" class="close fr">+</a>
+				</div>
+				<div class="center">
+					<ul class="params-list">
+						<li><img src="../addons/ewei_shop/static/cate/img/sel_params_l1.png"/>直径d=<span class="diameter"></span>cm</li>
+						<li><img src="../addons/ewei_shop/static/cate/img/sel_params_l2.png"/>适合<span class="fitnumber"></span>人分享</li>
+						<li><img src="../addons/ewei_shop/static/cate/img/sel_params_l3.png"/>含<span class="tableware"></span>套餐具</li>
+						<li><img src="../addons/ewei_shop/static/cate/img/sel_params_l4.png"/>须提前<span class="scheduletime"></span>小时预定</li>
+					</ul>
+					<img class="s-img" src="../addons/ewei_shop/static/cate/img/sel_params_img.png" />
+					<div id="goodinfores">
+						<script id='goodinfo' type='text/html'>
+							<%each specs as spec%>
+								<dl class="params-item">
+									
+									<input type='hidden' name="optionid[]" class='optionid optionid_<%spec.id%>' value="" title="<%spec.title%>">
+									<dt><%spec.title%></dt>
+										<%each spec.items as value index%>
+											<dd    <%if index==0%>class="active"<%/if%>   specid='<%spec.id%>' oid="<%value.id%>" title='<%value.title%>' thumb='<%value.thumb%>'><%value.title%></dd>
+											
+										<%/each%>
+									
+	                				
+									<dd id="more" class="more">更多</dd>
+								</dl>
+							<%/each%>
+						</script>
+					</div>	
+				</div>
+				<a href="javascript:;" id="add" class="bottom">加入购物车<span>（¥:<span class="cartprice">0.00</span>）</span></a>
+			</div>
+			<!-- 商品选择规格参数  E-->
+			<div class="detail-footer clearfix">
+				<img id="empty-car" src="../addons/ewei_shop/static/cate/img/delete_icon_red.png"/>
+				<div class="wrap fr fv">
+					<section>
+						<span class="price">￥<span class="price1">0.00</span></span>
+						<p>商品</p>
+					</section>
+					<!--<section><span class="price">+</span></section>
+					<section>
+						<span class="price">￥<span class="price2">0.00</span></span>
+						<p>配送费</p>
+					</section>-->
+					<section id="confirm" class="button">去结算</section>
+				</div>
+			</div>
+		</div>
+		<div id="bir-text" class="page hide">
+			<div class="order-head">
+				<a class="back" href="javascript:;"><img src="../addons/ewei_shop/static/cate/img/order_back.png" /></a>
+				生日牌
+			</div>
+			<div class="content">
+				<a href="javascript:;" class="wish-text-item wish-mar wish-input active">
+					<span>自定义</span><input class="input" type="text" placeholder="最多8个汉字或16个字符">
+				</a>
+				<div id="birthdaycard">
+					<script id='birthdaycard1' type='text/html'>
+					<%each cardres as card%>
+						<a href="javascript:;" thisname="text"  class="wish-text-item"><span><%card.title%></span></a>
+					<%/each%>	
+					</script>
+				</div>
+			</div>
+		</div>
+
+		<div id="bir-hat" class="page hide">
+			<div class="order-head">
+				<a class="back" href="javascript:;"><img src="../addons/ewei_shop/static/cate/img/order_back.png" /></a>
+				生日帽
+			</div>
+			
+			<div class="content">
+				
+				<div id="cakehat">
+					<script id='cakehat1' type='text/html'>
+						<%each cakehatres as hatres%>
+							<a href="javascript:;" thisname="hat" cid="<%hatres.id%>" class="wish-text-item wish-icon-item  "><img src="<%hatres.thumb%>"/><span><%hatres.title%></span></a>
+						<%/each%>
+					</script>
+				</div>
+			</div>
+		</div>
+
+
+		<div id="bir-candle" class="page hide">
+			<div class="order-head">
+				<a class="back" href="javascript:;"><img src="../addons/ewei_shop/static/cate/img/order_back.png" /></a>
+				生日蜡烛
+			</div>
+			
+			<div class="content">
+				
+				<div id="birthdaycandle">
+					<script id='birthdaycandle1' type='text/html'>
+						<%each candleres as candle%>
+							<a href="javascript:;"	thisname="candle" cid="<%candle.id%>" class="wish-text-item wish-icon-item  "><img src="<%candle.thumb%>"/><span><%candle.title%></span></a>
+						<%/each%>
+					</script>
+				</div>
+			</div>
+		</div>
+
+
+
+		<div id="bir-fruit" class="page hide">
+			<div class="order-head">
+				<a class="back" href="javascript:;"><img src="../addons/ewei_shop/static/cate/img/order_back.png" /></a>
+				水果夹心
+			</div>
+			
+			<div class="content">
+				
+				<div id="birthdayfruit">
+					<script id='birthdayfruit1' type='text/html'>
+						<%each fruitres as fruit%>
+							<a href="javascript:;"	thisname="fruit" cid="<%fruit.id%>" class="wish-text-item wish-icon-item  "><img src="<%fruit.thumb%>"/><span><%fruit.title%></span></a>
+						<%/each%>
+					</script>
+				</div>
+			</div>
+		</div>
+
+
+
+		
+		<script src="../addons/ewei_shop/static/cate/js/jquery-1.12.4.min.js"></script>
+		<script src="../addons/ewei_shop/static/cate/js/jquery.lazyload.min.js"></script>
+		<script src="../addons/ewei_shop/static/cate/js/tools.js"></script>
+		<script type="text/javascript">
+			var nowid;
+			var shopoption=false;
+			var goodid;
+			
+			require(['core', 'tpl','../addons/ewei_shop/static/cate/js/swiper-3.4.2.min.js'], function (core, tpl,swipe) {
+				var isLoaddingShopComplete = false, isLoaddingCartComplete = false;
+				//获取购物车中的内容
+				showCartList();
+				
+				var timeInterval = setInterval(function () {
+					if (isLoaddingShopComplete && isLoaddingCartComplete) {
+						loadImg();
+						clearInterval(timeInterval);
+					}
+				}, 50);
+				//获取推荐的商品
+				function  getshop(){
+					core.json('shop/cart', {'act':'shop'}, function(json) {
+						$('#allshop').html(tpl('shoplist', json.result));
+						isLoaddingShopComplete = true;
+						//播放最后执行
+/*						new swipe('#banner', {
+							autoplay: 3000,
+							autoplayDisableOnInteraction: false,
+							loop: true
+						});
+				
+					*/
+					});
+				}	
+				
+				//返回购物车所有的id
+				function  getallshopid(){
+					var ids = [];
+					var cartobj=$('#car-list li');
+					
+					
+					for(var i=0;i<cartobj.length;i++){
+						
+						ids.push(cartobj[i].getAttribute('data-cartid')) ;
+						
+					}
+					
+					
+					return ids;
+					
+				}
+				
+				//清空/删除单个购物车商品的方法
+				function   removecart(ids, isEmpty, _this){
+					console.log(ids);
+					var url="{php echo $this->createMobileUrl('shop/cart')}";
+				    $.post(url,
+				    {
+				        op:"remove",
+				        ids:ids
+				    },function(data,status){
+				    	
+			        	//更新购物车数量
+						var cardnum=Number($('#cardnum').text());
+						if(cardnum>ids.length){
+							cardnum=cardnum-ids.length;
+							$('#cardnum').text(cardnum)
+						}
+						else{
+							$('#cardnum').text(cardnum)
+							$('#cardnum').hide();
+						}
+					
+						
+			        	//更新购物车数量
+				    	
+				        //删除成功
+				        Tools.hideIndicator();
+				        if (isEmpty) {
+				        	$('#car-list').html('');
+							Tools.toast('清空成功');
+							//显示空页面
+							showCartList();
+				        }else {
+				        	$(_this).parents('li').remove();
+				        	Tools.toast('删除成功');
+				        	//判断有无数据
+				        	showCartList();
+				        }
+				        //$(_this).parents('li').remove();
+				    });					
+				}
+				
+					
+				
+				
+				function  confirm(){
+					var allids=getallshopid();
+					location.href = core.getUrl('order/confirm',{cartids:allids.join(',')});
+				}
+				
+				
+				//更新购物车数量的方法
+				function   updatecart(id,goodsid,total){
+ 					core.json('shop/cart',{'op':'updatenum',id:id,goodsid:goodsid, total:total},null,false,true);					
+				}
+				
+    			//获取商品规格信息的方法
+    			function getoptions2(){
+					Tools.showIndicator();
+					//先获取所有保存options的容器
+    				alloptionobj=$('#goodinfores .active');
+    				//console.log(alloptionobj);
+    				var alloptionsid='';
+    				
+    				for (var i=0;i<alloptionobj.length;i++) {
+    					
+    					
+    					//console.log(alloptionobj[i].getAttribute('oid'));
+    					
+    					if(alloptionobj[i].getAttribute('oid')==undefined){
+    						break;
+    					}
+    					if(i+1<alloptionobj.length){
+    						alloptionsid+=alloptionobj[i].getAttribute('oid')+'_';
+    					}
+    					else{
+    						alloptionsid+=alloptionobj[i].getAttribute('oid');
+    					}
+    					
+    				}
+    				
+    				
+    				//获得结果进行查询
+    				console.log('你为什么不执行了？');
+    				/* 这里不执行  gao*/
+    				core.json('shop/category',{optionid:alloptionsid},function(json){
+    					Tools.hideIndicator();
+    					if(json.result.options!=false){
+    					$('.diameter').text(json.result.options.diameter);
+    					$('.fitnumber').text(json.result.options.fitnumber);
+    					$('.tableware').text(json.result.options.tableware);
+    					$('.scheduletime').text(json.result.options.scheduletime);
+						$('#show-sel .top  .price').text(json.result.options.marketprice);
+						$('#add').attr('show','addcart');
+						$('#add').html('加入购物车<span>（¥:'+json.result.options.marketprice+'）</span>').attr('href', '#');
+						nowoptions=json.result.options.id;
+						}
+						//$('.cartprice').text(json.result.options.marketprice);
+						
+    				});
+    				
+    				console.log(alloptionsid);
+    				
+    				
+    			}
+				
+				getshop();
+				
+				//HanXingXing				
+				
+				const MAX = 1000000;
+				//过渡时间
+				const TIME = 300;
+				/*
+				 * 弹出底部选择参数框 
+				 * @params: Obj== {
+				 	* 	triggerEle： 触发弹框的元素
+				 * 		ele: 底部元素
+				 * 		open: 显示弹框回调
+				 * 		closeEle: 触发关闭弹框元素
+				 * 		close: 关闭弹框回调
+				 * }
+				 * */
+				var selElement = Tools.selParams({
+					triggerEle: '.add_cart',
+					ele: '#show-sel',
+					closeEle: '.close',
+					open:function(e, defferd){
+						goodid=e.getAttribute('goodid');
+						var price =e.getAttribute('price');
+						
+						console.log(price,goodid);
+						
+						
+						//获取商品的详情
+						core.json('shop/detail',{id:goodid},function(json){
+							
+								console.log(json.result);
+								//默认价格显示
+								var minprice=json.result.goods.minprice;
+								var maxprice=json.result.goods.maxprice;
+								var marketprice=json.result.goods.marketprice;
+								var trueprice=0;
+								if(minprice !=maxprice){
+									trueprice=minprice+'-'+maxprice;
+								}
+								else{
+									trueprice=marketprice;
+								}
+								$('#show-sel .top  .price').text(trueprice);
+								//默认价格显示end
+							
+							
+							
+							
+							//有规格
+							if(json.result.specs.length>0){
+								shopoption=true;
+								$('#goodinfores').show();
+								$('#goodinfores').html(tpl('goodinfo',json.result) );
+								console.log(json.result);
+
+								//规格选作
+								$('.params-item').delegate('dd', 'click', function() {
+									$(this).addClass('active').siblings().removeClass('active');
+									if (this.id === 'more') {
+										//点击了更多
+										$('#add').html('联系客服').attr('href', 'tel:{php echo $phone;}');
+									}else {
+										
+										//更新规格图片
+										$('.s-img').attr('src',$(this).attr('thumb'));
+										
+										//保存每次选作的规格
+										$(this).parent().find("input").val($(this).attr('oid'));
+											
+										//执行操作规格返回的数据
+										getoptions2();
+										
+										
+										
+									}
+								});
+								//规格选作end
+								
+								
+							}
+							//无规格
+							else{
+								e.setAttribute('hide', true);
+								var url="{php echo $this->createMobileUrl('shop/detail')}&id="+goodid;
+								window.location.href=url;
+								
+								/*
+								$('#goodinfores').hide();
+								$('#show-sel .params-list').html('');
+								$('#add').attr('show','addcart');
+								$('#add').html('加入购物车<span>（¥:'+price+'）</span>').attr('href', '#');
+								*/
+							}
+							
+							
+							
+							//点击添加购物车,会请求查询默认选作的规格信息
+							getoptions2();
+							
+							//延迟对象
+							defferd.resolve();
+						});
+					
+					}
+				});
+				
+				
+ 				//最终的购物车被点击
+ 				$('#show-sel').delegate('#add', 'click', function() {
+    				if($(this).attr('show')=='addcart'){
+    					//添加购物车
+    					var more=$('.more');
+    					for (var i=0;i<more.length;i++) {
+    						if(more.eq(i).hasClass('active')){
+    							return;
+    						}
+    					}   
+    					Tools.showIndicator();
+    					var url="{php echo $this->createMobileUrl('shop/cart')}";
+					    $.post(url,
+					    {
+					        op:'add',
+					        id:goodid,
+					        optionid:nowoptions,
+					        total:1
+					    },
+					        function(data,status){
+					        	Tools.hideIndicator();
+					        	var data=eval("("+data+")");
+					        	selElement.hide();
+					        	if(status=='success'){
+					        		showCartList();
+					        		if(data.status==1){
+					        			//添加成功更新下数量.
+					        			var cardnum=$('#cardnum').text();
+					        			console.log(cardnum);
+					        			console.log(typeof(cardnum));					        			
+					        			if(cardnum==''){
+					        				console.log('我执行到了!');
+					        				$('#cardnum').text(1)
+					        			}
+					        			else{
+					        				cardnum++;
+					        				$('#cardnum').text(cardnum);
+					        			}
+					        			$('#cardnum').show();
+					        			//添加成功更新下数量.
+					        			Tools.toast(data.result.message);
+					        		} else {
+					        			Tools.toast(data.result.message);
+					        		}
+					        		
+					        	}
+					        	else{
+					        		Tools.toast('网络请求失败!');
+					        	}
+					        	
+					    });
+    					
+
+    				
+    					
+    				}
+ 				});				
+				
+				
+				
+				//结算按钮执行
+				$('#confirm').click(function(){
+					confirm();
+				});
+				
+				
+				//更新购物车的帽子/牌子/蜡烛
+				function updategift(nowid,birthdaycard,cakehat,birthdaycandle,cakehatimg,birthdaycandleimg,cakehattitle,birthdaycandletitle,fruitid,fruitimg,fruittitle){
+					console.log(nowid+','+birthdaycard+','+cakehat+','+birthdaycandle+','+cakehatimg+','+birthdaycandleimg+','+cakehattitle+','+birthdaycandletitle+','+fruitid+','+fruitimg+','+fruittitle);
+					core.json('shop/cart',{act:'updatecart',id:nowid,birthdaycard:birthdaycard,cakehat:cakehat,birthdaycandle:birthdaycandle,cakehatimg:cakehatimg,birthdaycandleimg:birthdaycandleimg,cakehattitle:cakehattitle,birthdaycandletitle:birthdaycandletitle,fruitid:fruitid,fruitimg:fruitimg,fruittitle:fruittitle},function(json){
+						console.log(json);
+					});	
+				}				
+				
+				
+				
+				
+				/*
+				 * 点击条目回调
+				 */
+				Tools.selItems('.wish-text-item', function(_this) {
+					var __this = $(_this);
+					
+					var	birthdaycard;
+					var cakehat;
+					var birthdaycandle;
+					var cakehatimg;
+					var birthdaycandleimg;	
+					var cakehattitle;
+					var birthdaycandletitle;
+					var fruitimg;
+					var fruitid;
+					var fruittitle;
+					var img;
+					
+					
+					//获取点击的是谁text,hat,candle
+					var who= __this.attr('thisname');
+					var whocid=__this.attr('cid');
+					if(who=='text'){
+						birthdaycard=__this.children('span').text();
+					}
+					else if(who=='hat'){
+						cakehat=whocid;
+						img=__this.children('img').attr('src');
+						cakehatimg=img;
+						cakehattitle=__this.children('span').text();
+						
+					}
+					else if(who=='candle'){
+						birthdaycandle=whocid;
+						img=__this.children('img').attr('src');
+						birthdaycandleimg=img;
+						birthdaycandletitle=__this.children('span').text();
+					}					
+					else if(who=='fruit'){
+						fruitid=whocid;
+						img=__this.children('img').attr('src');
+						fruitimg=img;
+						fruittitle=__this.children('span').text();
+					}
+					
+					//console.log(whocid);
+					updategift(nowid,birthdaycard,cakehat,birthdaycandle,cakehatimg,birthdaycandleimg,cakehattitle,birthdaycandletitle,fruitid,fruitimg,fruittitle);
+					
+					var _id = '#'+__this.parents('.page')[0].id;
+					var sel = $(_id).attr('data-sel');
+					var className = $(_id).attr('data-class');
+					var selEle = $('#'+sel).find('.'+className);
+					if (__this.hasClass('wish-input')) {
+						__this.find('.input').focus();
+					}else {
+						hidePage(_id);
+						var v = __this.find('span').html();
+						if(who!='text'){
+							//console.log(__this+'aaa');
+							selEle.parent().css('background-image','url('+img+')');
+						}
+						
+						
+						
+						selEle.html(v).css('color', '#666666');
+					}
+				});
+				
+				$('.params-item').delegate('dd', 'click', function() {
+					$(this).addClass('active').siblings().removeClass('active');
+					if (this.id === 'more') {
+						//点击了更多
+						$('#add').html('联系客服').attr('href', 'tel:{php echo $phone;}');
+					}else {
+					    $('#add').html('加入购物车<span>（¥:'+price+'）</span>').attr('href', '#');
+					}
+				});
+				$('#car-list').delegate('.add', 'click', function () {
+					var cartid=$(this).attr('cartid');
+					var	goodsid=$(this).attr('data-goodsid');
+					var	stock=$(this).attr('data-stock');
+					var prev = $(this).prev();
+					var val = parseInt(prev.val());
+					if(val+1>stock){
+						Tools.toast('最多可购买'+stock+'件');
+						return false;
+					}
+					val++;
+					val = Math.min(MAX, val);
+					$(this).prev().prev().html('-');
+					//prev.val(val);
+					//后端保存件数
+					showCartList();
+					updatecart(cartid,goodsid,val);
+					
+					
+				});
+				$('#car-list').delegate('.minus', 'click', function () {
+					var cartid=$(this).attr('cartid');
+					var	goodsid=$(this).attr('data-goodsid');
+					var next = $(this).next();
+					var val = parseInt(next.val());
+					val--;
+					if (val === 0) {
+						delFun(this);
+					}
+					val = Math.max(1, val);
+					if (val === 1) {
+						update(this, true);
+					}else {
+						update(this, false);
+					}
+					//next.val(val);
+					//后端保存件数
+					showCartList();
+					updatecart(cartid,goodsid,val);
+				});
+				$('#car-list').delegate('.input', 'blur', function () {
+					var val = $(this).val();
+					var _this = $(this).next()[0];
+					if (val === 1) {
+						update(_this, true);
+					}else {
+						update(_this, false);
+					}
+					if (val > MAX || val < 1) {
+						this.value = 1;
+						Tools.toast('亲~商品数量必须在1-'+MAX+'之间');
+					}
+				});
+				//清空购物车
+				$('#empty-car').click(function() {
+					Tools.alert('亲，你确定要清空购物车吗？', function () {
+						
+						var ids=getallshopid();
+						Tools.showIndicator();
+
+						if(ids.length>0){
+							removecart(ids, true);
+						}
+						else{
+							Tools.toast('购物车没有商品');
+						}
+					}, true);
+				});
+				function update(_this, isMin) {
+					if (isMin) {
+						$(_this).html('<img src="../addons/ewei_shop/static/cate/img/delete_icon.png" />');
+					}else {
+						$(_this).html('-');
+					}
+				}
+				function delFun(_this) {
+					//删除商品
+					Tools.alert('你确定要删除该商品吗？', function () {
+						//模拟 1s
+						Tools.showIndicator();
+						var ids = [];
+						ids.push(_this.getAttribute('cartid'));
+						removecart(ids, false, _this);
+					}, true);
+				}
+				
+				/* 此模块为选择生日牌...功能 */
+				(function () {
+					var pageText = $('#bir-text'), pageCandle = $('#bir-candle');
+					
+					$(document).delegate('.links .sel', 'click', function() {
+						//得到父元素id值
+						var _this = $(this);
+						
+						nowid=_this.parent().parent().parent().attr('data-cartid');
+						
+						var _id = _this.parents('li')[0].id;
+						var _class = _this.find('span')[0].className;
+						$('#'+this.dataset.id).attr('data-sel', _id);
+						$('#'+this.dataset.id).attr('data-class', _class);
+						showPage('#'+this.dataset.id);
+					});
+					$('.back').click(function () {
+						var id = '#'+$(this).parents('.page')[0].id;
+						var sel = $(id).attr('data-sel');
+						var className = $(id).attr('data-class');
+						var selEle = $('#'+sel).find('.'+className);
+						var textElement = $(id).find('.wish-text-item.wish-input');
+						//选择了自定义
+						if (textElement.hasClass('active')) {
+							var value = textElement.find('input').val();
+							if ($.trim(value) === '') {
+								Tools.toast('*_* 你还没有填写自定义生日牌噢~~');
+								return;
+							}
+							if ($.trim(value).length > 16) {
+								Tools.toast('*_* 最多只能输入16个字符~~');
+								return;
+							}
+							var v = $(id).find('.input').val();
+							/*没用但是不能少,偷懒*/
+							var	birthdaycard=v;
+							var cakehat;
+							var birthdaycandle;
+							var cakehatimg;
+							var birthdaycandleimg;	
+							var cakehattitle;
+							var birthdaycandletitle;
+							var img;
+							/*没用但是不能少,偷懒*/
+							updategift(nowid,birthdaycard,cakehat,birthdaycandle,cakehatimg,birthdaycandleimg,cakehattitle,birthdaycandletitle);
+							selEle.html(v).css('color', '#666666');
+						}
+						//选择完成，关闭
+						hidePage(id);
+					});
+				})();			
+				
+				//获取生日牌子
+				function birthdaycard(ele){
+					Tools.showIndicator();
+					core.json('shop/cart',{act:'birthdaycard'},function(json){
+						Tools.hideIndicator();
+						var _this = $(ele); _this.show(); setTimeout(function () { _this.css('transform', 'translateX(0)'); }, 50)
+						$('#birthdaycard').html(  tpl('birthdaycard1',json.result) ); 
+					});	
+				}
+				//获取生日牌子
+				function cakehat(ele){
+					Tools.showIndicator();
+					core.json('shop/cart',{act:'cakehat'},function(json){
+						Tools.hideIndicator();
+						var _this = $(ele); _this.show(); setTimeout(function () { _this.css('transform', 'translateX(0)'); }, 50)
+						$('#cakehat').html(  tpl('cakehat1',json.result) ); 
+					});	
+				}				
+				
+				//获取生日蜡烛
+				function birthdaycandle(ele){
+					Tools.showIndicator();
+					core.json('shop/cart',{act:'birthdaycandle'},function(json){
+						console.log('下面是打印生日蜡烛数据');
+						console.log(json);
+						Tools.hideIndicator();
+						var _this = $(ele); _this.show(); setTimeout(function () { _this.css('transform', 'translateX(0)'); }, 50)
+						$('#birthdaycandle').html(  tpl('birthdaycandle1',json.result) ); 
+					});	
+				}
+
+
+				//获取水果夹心
+				function birthdayfruit(ele){
+					Tools.showIndicator();
+					core.json('shop/cart',{act:'birthdayfruit'},function(json){
+						console.log('下面是打印水果夹心数据');
+						console.log(json);
+						Tools.hideIndicator();
+						var _this = $(ele); _this.show(); setTimeout(function () { _this.css('transform', 'translateX(0)'); }, 50)
+						$('#birthdayfruit').html(  tpl('birthdayfruit1',json.result) ); 
+					});	
+				}
+
+
+				
+				//2017.7.6  韩
+				function showPage(ele) {
+					if(ele=='#bir-text'){
+						console.log('牌');
+						birthdaycard(ele);
+					}
+					else if(ele=='#bir-hat'){
+						console.log('帽子');	
+						cakehat(ele);
+					}
+					else if(ele=='#bir-candle'){
+						console.log('蜡烛');	
+						birthdaycandle(ele);
+					}	
+					else if(ele=='#bir-fruit'){
+						console.log('水果');	
+						birthdayfruit(ele);						
+					}
+				}
+				function hidePage(ele) {
+					var _this = $(ele).css('transform', 'translateX(100%)');
+					setTimeout(function() {
+						$(ele).hide();
+					}, TIME);
+				}
+				function isEmpty(ele) {
+					return ele.length <= 0;
+				}
+				function showCartList() {
+					Tools.showIndicator();
+			        core.json('shop/cart',{},function(json){
+			        	Tools.hideIndicator();
+			           $('#car-list').html(  tpl('cartlist',json.result) );
+			           console.log(json.result);
+			           isLoaddingCartComplete = true;
+			           var pros = $('#car-list').find('li');
+			           console.log(pros.length);
+			           if (isEmpty(pros)) $('#empty').show();
+			           else $('#empty').hide();
+			           $('.detail-footer .price1').text(json.result.totalprice);
+			           $('.detail-footer .price2').text(json.result.dispatchprice);
+			        });
+				}
+				//require End
+				
+				(function () {
+					var showList = $('#show-list');
+					var top = $('.top-header-menu');
+					showList.click(function () {
+						var _this = this;
+						$('.top-header-menu').toggle(function () {
+						},function () {
+							if (top.css('display') === 'none') $(_this).find('img')[0].src = '../addons/ewei_shop/static/cate/img/i_list_icon.png';
+							else $(_this).find('img')[0].src = '../addons/ewei_shop/static/cate/img/i_close_icon.png';
+						});
+					});
+				})();
+				
+				function loadImg() {
+					$("img.lazyload").lazyload({
+						placeholder : "../addons/ewei_shop/static/cate/img/placeholder_img.png",
+						effect: "fadeIn",
+						container: '.content'
+					});
+				}
+			});
+			
+		</script>
+	</body>
+</html>

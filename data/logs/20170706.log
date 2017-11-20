@@ -1,0 +1,21 @@
+2017-07-06 16:32:13 trace :
+------------
+String:
+<xml><ToUserName><![CDATA[gh_60e7194e99e7]]></ToUserName>
+<FromUserName><![CDATA[okBFJ1r6giZaeJk4mHwcOi2gMyi0]]></FromUserName>
+<CreateTime>1499329932</CreateTime>
+<MsgType><![CDATA[text]]></MsgType>
+<Content><![CDATA[http://zhuyu.baimuv.com/app/index.php?i=34&c=entry&do=order&m=ewei_shop&p=confirm&cartids=53]]></Content>
+<MsgId>6439573024294861003</MsgId>
+</xml>
+
+2017-07-06 16:32:13 params :
+------------
+Array:
+rule : -2 ;
+module :  ;
+message : Array ;
+
+2017-07-06 16:32:13 response :
+------------
+
